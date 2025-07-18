@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Zaan 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe0f0, #e0ccff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #6b0e4f;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 3em;
+      animation: fadeInDown 2s ease-in-out;
+    }
+    p {
+      max-width: 600px;
+      margin: 30px auto;
+      font-size: 1.2em;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .heart {
+      font-size: 2em;
+      color: red;
+      animation: pulse 1.5s infinite;
+    }
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      margin-top: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Zaan 🎂</h1>
+  <img src="https://chat.openai.com/cdn-cgi/imagedelivery/1tzNUsH1HgFZ2M0EXmplKA/5327dc73-e5b4-490e-8984-bbce0e1d30d0/public" alt="Zaan" class="photo" />
+  <p>
+    Tum meri zindagi ki woh roshni ho jisse sab kuch chamak utha hai.<br />
+    Har pal, har lamha tumhara saath mere liye ek dua jaisa hai.<br /><br />
+    Aaj tumhara special din hai, aur main sirf itna kehna chahta hoon...<br />
+    <strong>Tera ban jaunga... 💍</strong><br /><br />
+    Har janam mein sirf tum, sirf Zaan! 💖<br />
+    <span class="heart">♥</span><br /><br />
+    Tumhara Shivam 🥰
+  </p>
+
+  <audio autoplay loop>
+    <source src="https://dl.sndup.net/cq44/Tera%20Ban%20Jaunga%20-%20Kabir%20Singh.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <canvas class="confetti"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 15 * 1000;
+    const animationEnd = Date.now() + duration;
+    const confetti = window.confetti;
+    (function frame() {
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+      });
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+      });
+      if (Date.now() < animationEnd) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  </script>
+</body>
+</html>
